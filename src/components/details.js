@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 function Details({ det, getDetails }) {
     const deleteDetails = async (id) => {
         try {
-            await axios.delete(`http://localhost:8000/deletetask/${id}`);
+            await axios.delete(`https://deploy-backend-two.vercel.app/deletetask/${id}`);
             toast.success(`Deleting`);
             getDetails();
         } catch (error) {

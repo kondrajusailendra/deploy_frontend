@@ -50,7 +50,7 @@ function Updatebyid() {
     const getDetails = async () => {
         try {
             setIsLoading(true);
-            const response = await axios.get(`http://localhost:8000/gettaskbyid/${id}`);
+            const response = await axios.get(`https://deploy-backend-two.vercel.app/gettaskbyid/${id}`);
             setDetails({
                 title: response.data.title,
                 description: response.data.description,
@@ -68,7 +68,7 @@ function Updatebyid() {
         e.preventDefault();
         setIsLoading(true);
         try {
-            await axios.put(`http://localhost:8000/updatetask/${id}`, details);
+            await axios.put(`https://deploy-backend-two.vercel.app/updatetask/${id}`, details);
             toast.success("Updated successfully");
             navigate("/");
         } catch (error) {

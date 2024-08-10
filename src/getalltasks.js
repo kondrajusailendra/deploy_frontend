@@ -23,7 +23,7 @@ function Get() {
     const getDetails = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get("http://localhost:8000/gettasks");
+            const response = await axios.get("https://deploy-backend-two.vercel.app/gettasks");
             setDetails(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
